@@ -48,6 +48,11 @@
         <item name="android:fontFamily">@font/sf_ui_display_semi_bold</item>
     </style>
 
-
+    <style name="NavigationBar">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="itemIconTint">@drawable/selector_item_color</item>
+        <item name="itemTextColor">@drawable/selector_item_color</item>
+    </style>
 
 </resources>
