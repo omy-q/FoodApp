@@ -3,4 +3,5 @@
     <string name="item_basket_text">Корзина</string>
     <string name="item_profile_text">Профиль</string>
     <string name="item_menu_text">Меню</string>
+    <string name="image_description">food image</string>
 </resources>
