@@ -4,4 +4,6 @@
     <string name="item_profile_text">Профиль</string>
     <string name="item_menu_text">Меню</string>
     <string name="image_description">food image</string>
+    <string name="image_gr_code_description">qr code view</string>
+    <string name="image_banner_description">banner image</string>
 </resources>

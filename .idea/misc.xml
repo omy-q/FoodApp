@@ -11,15 +11,24 @@
         <entry key="..\:/android/FoodApp/app/src/main/res/drawable/ic_profile.xml" value="0.2546875" />
         <entry key="..\:/android/FoodApp/app/src/main/res/drawable/ic_profile_active.xml" value="0.2546875" />
         <entry key="..\:/android/FoodApp/app/src/main/res/drawable/ic_profile_disable.xml" value="0.2546875" />
+        <entry key="..\:/android/FoodApp/app/src/main/res/drawable/rounded_fg.xml" value="0.2703125" />
         <entry key="..\:/android/FoodApp/app/src/main/res/drawable/selector_icon_basket.xml" value="0.2546875" />
         <entry key="..\:/android/FoodApp/app/src/main/res/drawable/selector_icon_menu.xml" value="0.2546875" />
         <entry key="..\:/android/FoodApp/app/src/main/res/drawable/selector_icon_profile.xml" value="0.2546875" />
+        <entry key="..\:/android/FoodApp/app/src/main/res/drawable/selector_item_category.xml" value="0.2703125" />
+        <entry key="..\:/android/FoodApp/app/src/main/res/drawable/selector_item_category_background.xml" value="0.2703125" />
+        <entry key="..\:/android/FoodApp/app/src/main/res/drawable/selector_item_category_font.xml" value="0.2703125" />
+        <entry key="..\:/android/FoodApp/app/src/main/res/drawable/selector_item_category_text.xml" value="0.2703125" />
         <entry key="..\:/android/FoodApp/app/src/main/res/drawable/selector_item_color.xml" value="0.2703125" />
         <entry key="..\:/android/FoodApp/app/src/main/res/drawable/selector_item_icon_color.xml" value="0.2703125" />
+        <entry key="..\:/android/FoodApp/app/src/main/res/drawable/selector_item_navigation.xml" value="0.2703125" />
         <entry key="..\:/android/FoodApp/app/src/main/res/drawable/selector_item_text_color.xml" value="0.2703125" />
         <entry key="..\:/android/FoodApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/android/FoodApp/app/src/main/res/layout/app_bar_food_menu.xml" value="0.1234375" />
+        <entry key="..\:/android/FoodApp/app/src/main/res/layout/app_bar_food_menu.xml" value="0.4738955823293173" />
         <entry key="..\:/android/FoodApp/app/src/main/res/layout/fragment_food_menu.xml" value="0.152" />
+        <entry key="..\:/android/FoodApp/app/src/main/res/layout/item_baner.xml" value="0.223731884057971" />
+        <entry key="..\:/android/FoodApp/app/src/main/res/layout/item_banner.xml" value="0.2" />
+        <entry key="..\:/android/FoodApp/app/src/main/res/layout/item_category.xml" value="1.0" />
         <entry key="..\:/android/FoodApp/app/src/main/res/layout/item_food_menu.xml" value="0.4" />
         <entry key="..\:/android/FoodApp/app/src/main/res/menu-v26/bottom_navigation_bar.xml" value="0.23854166666666668" />
         <entry key="..\:/android/FoodApp/app/src/main/res/menu/bottom_navigation_bar.xml" value="0.23854166666666668" />
