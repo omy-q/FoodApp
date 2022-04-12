@@ -8,9 +8,9 @@ import com.example.foodapp.view.base.Binder
 class FoodMenuHolder(private val binding: ItemFoodMenuBinding) : RecyclerView.ViewHolder(binding.root),
     Binder<FoodData> {
     override fun bind(data: FoodData) {
-        binding.foodName
-        binding.foodDescription
-        binding.foodImage
-        binding.foodPrice
+        binding.foodName.text = data.foodName
+        binding.foodDescription.text = data.foodDescription
+//        binding.foodImage
+        binding.foodPrice.text = data.foodPrice.toString()
     }
 }

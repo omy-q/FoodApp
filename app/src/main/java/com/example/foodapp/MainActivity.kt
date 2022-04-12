@@ -6,7 +6,6 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.foodapp.databinding.ActivityMainBinding
 import com.example.foodapp.view.FoodMenuFragment
-import com.example.foodapp.view.base.BaseFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -15,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initBottomNavigationView()
+        binding.navigationBar.selectedItemId = R.id.item_menu
     }
 
     private fun initBottomNavigationView() {

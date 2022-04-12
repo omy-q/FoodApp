@@ -1,5 +1,11 @@
 package com.example.foodapp.model.data
 
 data class CategoryData(
-    val id_category: Int
+    val category: String
+)
+
+val testCategoryData = mutableListOf<CategoryData>(
+    CategoryData("десерты"),
+    CategoryData("горячме блюда"),
+    CategoryData("супы")
 )

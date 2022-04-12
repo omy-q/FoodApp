@@ -8,6 +8,6 @@ import com.example.foodapp.view.base.Binder
 class CategoryHolder(private val binding: ItemCategoryBinding) :
     RecyclerView.ViewHolder(binding.root), Binder<CategoryData> {
     override fun bind(data: CategoryData) {
-        binding.categoryView
+        binding.categoryView.text = data.category
     }
 }
