@@ -3,15 +3,15 @@ package com.example.foodapp.view
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.foodapp.databinding.ItemFoodMenuBinding
-import com.example.foodapp.model.data.FoodData
+import com.example.foodapp.databinding.ItemBannerBinding
+import com.example.foodapp.model.data.BannerData
 import com.example.foodapp.view.base.BaseRecyclerAdapter
-import com.example.foodapp.view.holder.FoodMenuHolder
+import com.example.foodapp.view.holder.BannerHolder
 
-class FoodMenuAdapter : BaseRecyclerAdapter<FoodData>() {
+class BannerAdapter : BaseRecyclerAdapter<BannerData>() {
     override fun getViewHolder(viewGroup: ViewGroup): RecyclerView.ViewHolder {
-        return FoodMenuHolder(
-            ItemFoodMenuBinding.inflate(
+        return BannerHolder(
+            ItemBannerBinding.inflate(
                 LayoutInflater.from(viewGroup.context),
                 viewGroup,
                 false
@@ -19,7 +19,7 @@ class FoodMenuAdapter : BaseRecyclerAdapter<FoodData>() {
         )
     }
 
-    fun setData(data: List<FoodData>){
+    fun setData(data: List<BannerData>){
         update(data)
     }
 }
