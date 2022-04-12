@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView
+    android:id="@+id/banner_image_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="112dp"
+    android:background="@drawable/rounded_fg"
+    android:contentDescription="@string/image_banner_description">
+</ImageView>
