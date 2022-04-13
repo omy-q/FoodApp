@@ -6,4 +6,13 @@
     <string name="image_description">food image</string>
     <string name="image_gr_code_description">qr code view</string>
     <string name="image_banner_description">banner image</string>
+
+    <string-array name="location">
+        <item>Moscow</item>
+        <item>St. Petersburg</item>
+        <item>Abakan</item>
+        <item>Abinsk</item>
+        <item>Adler</item>
+        <item>Azov</item>
+    </string-array>
 </resources>

@@ -27,7 +27,8 @@
             <Spinner
                 android:id="@+id/location_view"
                 android:layout_width="wrap_content"
-                android:layout_height="24dp" />
+                android:layout_height="24dp"
+                android:entries="@array/location"/>
 
             <ImageView
                 android:id="@+id/qr_code_view"
