@@ -15,6 +15,6 @@ class FoodMenuHolder(private val binding: ItemFoodMenuBinding) : RecyclerView.Vi
         binding.foodImage.load(data.foodImage){
             transformations(CircleCropTransformation())
         }
-        binding.foodPrice.text = "from ${data.foodPrice.toString()} rubles"
+        binding.foodPrice.text = "from ${data.foodPrice} rubles"
     }
 }
