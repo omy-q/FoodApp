@@ -14,8 +14,7 @@ class CategoryAdapter(private val categoryClickListener: CategoryClickListener) 
     private val chipClickListener = object : ChipClickListener {
         override fun onClick(oldItemCheckedPosition: Int, newItemCheckedPosition: Int) {
             currentCheckedItemPosition = newItemCheckedPosition
-            notifyItemChanged(oldItemCheckedPosition)
-            notifyItemChanged(newItemCheckedPosition)
+            notifyDataSetChanged()
         }
     }
 
