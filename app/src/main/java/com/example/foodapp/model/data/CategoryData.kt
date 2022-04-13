@@ -12,3 +12,9 @@ data class CategoryData(
     val categoryBanner: String
 )
 
+data class ApiCategoryAnswer(
+    @Expose
+    @SerializedName("categories")
+    val categories: List<CategoryData>
+)
+

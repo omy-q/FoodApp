@@ -6,17 +6,11 @@ import io.reactivex.rxjava3.core.Single
 class FoodModelImplementation(
     private val remoteSource: RemoteApi
 ): FoodModel {
-    override fun getFoodCategories(): Single<List<CategoryData>> {
+    override fun getFoodCategories(): Single<ApiCategoryAnswer> {
         return remoteSource.getCategories()
     }
 
-    override fun getFoodMenuOfCategory(category: CategoryData): Single<List<FoodData>> {
+    override fun getFoodMenuOfCategory(category: CategoryData): Single<ApiFoodDataAnswer> {
         return remoteSource.getFoodOfCategory(category.category)
-    }
-
-    override fun getBanners(): Single<List<BannerData>> {
-        return Single.fromCallable {
-            testBannerData
-        }
     }
 }

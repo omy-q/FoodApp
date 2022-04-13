@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodapp.databinding.ItemBannerBinding
-import com.example.foodapp.model.data.BannerData
 import com.example.foodapp.model.data.CategoryData
 import com.example.foodapp.view.base.BaseRecyclerAdapter
 import com.example.foodapp.view.holder.BannerHolder
@@ -20,7 +19,8 @@ class BannerAdapter : BaseRecyclerAdapter<CategoryData>() {
         )
     }
 
-    fun setData(data: List<CategoryData>){
+    fun updateData(data: List<CategoryData>){
         update(data)
+        notifyDataSetChanged()
     }
 }

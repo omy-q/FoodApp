@@ -19,7 +19,8 @@ class FoodMenuAdapter : BaseRecyclerAdapter<FoodData>() {
         )
     }
 
-    fun setData(data: List<FoodData>){
-        update(data)
+    fun setFoodData(data: List<FoodData>){
+        setNewData(data)
+        notifyDataSetChanged()
     }
 }

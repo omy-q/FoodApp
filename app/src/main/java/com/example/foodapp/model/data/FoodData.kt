@@ -13,3 +13,9 @@ data class FoodData(
     val foodImage: String,
     val foodPrice: Int
 )
+
+data class ApiFoodDataAnswer(
+    @Expose
+    @SerializedName("meals")
+    val foodData: List<FoodData>
+)

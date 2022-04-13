@@ -4,10 +4,18 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 abstract class BaseRecyclerAdapter<T> : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    private val data: MutableList<T> = mutableListOf()
+    private var data: MutableList<T> = mutableListOf()
 
     fun update(data: List<T>) {
         this.data.addAll(data)
+    }
+
+    fun setNewData(data: List<T>) {
+        this.data = data.toMutableList()
+    }
+
+    fun getDataPosition(position: Int): T {
+        return data[position]
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

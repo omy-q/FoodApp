@@ -8,7 +8,6 @@ import com.example.foodapp.model.RemoteDataSource
 import com.example.foodapp.model.data.CategoryData
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
-import java.util.concurrent.ScheduledExecutorService
 
 class FoodViewModel(
     private val liveData: MutableLiveData<AppState> = MutableLiveData(),
@@ -21,7 +20,7 @@ class FoodViewModel(
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ categoriesData ->
-                liveData.postValue(AppState.SuccessInitData(categoriesData))
+                liveData.postValue(AppState.SuccessInitData(categoriesData.categories))
             }, { error ->
                 liveData.postValue(AppState.Error(error))
             })
@@ -32,7 +31,7 @@ class FoodViewModel(
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ food ->
-                liveData.postValue(AppState.SuccessFoodOfCategory(food))
+                liveData.postValue(AppState.SuccessFoodOfCategory(food.foodData))
             }, {error ->
                 liveData.postValue(AppState.Error(error))
             })

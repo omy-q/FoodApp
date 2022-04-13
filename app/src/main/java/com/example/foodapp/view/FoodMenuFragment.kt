@@ -6,13 +6,19 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.foodapp.databinding.FragmentFoodMenuBinding
+import com.example.foodapp.model.data.CategoryData
 import com.example.foodapp.view.base.BaseFragment
 import com.example.foodapp.view_model.AppState
 import com.example.foodapp.view_model.FoodViewModel
 
 class FoodMenuFragment : BaseFragment<FragmentFoodMenuBinding>(FragmentFoodMenuBinding::inflate) {
+    private val categoryClickListener = object : CategoryClickListener{
+        override fun onClick(category: CategoryData) {
+            foodViewModel.getDataOfCategory(category)
+        }
+    }
     private val foodAdapter = FoodMenuAdapter()
-    private val categoryAdapter = CategoryAdapter()
+    private val categoryAdapter = CategoryAdapter(categoryClickListener)
     private val bannerAdapter = BannerAdapter()
     private val foodViewModel: FoodViewModel by lazy {
         ViewModelProvider(this).get(FoodViewModel::class.java)
@@ -31,11 +37,11 @@ class FoodMenuFragment : BaseFragment<FragmentFoodMenuBinding>(FragmentFoodMenuB
     private fun render(appState: AppState) {
         when (appState) {
             is AppState.SuccessInitData -> {
-                bannerAdapter.setData(appState.categories)
-                categoryAdapter.setData(appState.categories)
-                foodViewModel.getDataOfCategory(categoryAdapter.getCurrentCategory())
+                bannerAdapter.updateData(appState.categories)
+                categoryAdapter.updateData(appState.categories)
+                foodViewModel.getDataOfCategory(categoryAdapter.getInitCategory())
             }
-            is AppState.SuccessFoodOfCategory -> foodAdapter.setData(appState.food)
+            is AppState.SuccessFoodOfCategory -> foodAdapter.setFoodData(appState.food)
             is AppState.Error -> setToast(appState.error)
         }
     }
