@@ -7,7 +7,7 @@ data class FoodData(
     @Expose
     @SerializedName("strMeal")
     val foodName: String,
-    val foodDescription: String = "",
+    val foodDescription: String,
     @Expose
     @SerializedName("strMealThumb")
     val foodImage: String,

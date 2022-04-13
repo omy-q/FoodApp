@@ -13,6 +13,7 @@
     
     <color name="navigation_view_disable">#7B7B7B</color>
     <color name="navigation_view_active">#FD3A69</color>
+    <color name="navigation_view_background">#F0F0F0</color>
 
     <color name="categories_text_disable">#C3C4C9</color>
     <color name="categories_text_active">#FD3A69</color>
@@ -23,4 +24,7 @@
     <color name="price_view_tint">#FBFBFB</color>
     <color name="price_view_text">#FD3A69</color>
     <color name="price_view_frame">#FD3A69</color>
+
+    <color name="food_screen_background">#FBFBFB</color>
+
 </resources>
