@@ -1,11 +1,14 @@
 package com.example.foodapp.model.data
 
+import com.google.gson.annotations.Expose
+import com.google.gson.annotations.SerializedName
+
 data class CategoryData(
-    val category: String
+    @Expose
+    @SerializedName("strCategory")
+    val category: String,
+    @Expose
+    @SerializedName("strCategoryThumb")
+    val categoryBanner: String
 )
 
-val testCategoryData = mutableListOf<CategoryData>(
-    CategoryData("десерты"),
-    CategoryData("горячме блюда"),
-    CategoryData("супы")
-)
