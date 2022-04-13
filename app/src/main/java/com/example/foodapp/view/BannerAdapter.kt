@@ -5,10 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodapp.databinding.ItemBannerBinding
 import com.example.foodapp.model.data.BannerData
+import com.example.foodapp.model.data.CategoryData
 import com.example.foodapp.view.base.BaseRecyclerAdapter
 import com.example.foodapp.view.holder.BannerHolder
 
-class BannerAdapter : BaseRecyclerAdapter<BannerData>() {
+class BannerAdapter : BaseRecyclerAdapter<CategoryData>() {
     override fun getViewHolder(viewGroup: ViewGroup): RecyclerView.ViewHolder {
         return BannerHolder(
             ItemBannerBinding.inflate(
@@ -19,7 +20,7 @@ class BannerAdapter : BaseRecyclerAdapter<BannerData>() {
         )
     }
 
-    fun setData(data: List<BannerData>){
+    fun setData(data: List<CategoryData>){
         update(data)
     }
 }

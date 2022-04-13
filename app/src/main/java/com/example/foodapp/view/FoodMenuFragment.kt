@@ -2,6 +2,7 @@ package com.example.foodapp.view
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.foodapp.databinding.FragmentFoodMenuBinding
@@ -28,14 +29,20 @@ class FoodMenuFragment : BaseFragment<FragmentFoodMenuBinding>(FragmentFoodMenuB
     }
 
     private fun render(appState: AppState) {
-        when(appState){
+        when (appState) {
             is AppState.SuccessInitData -> {
-                bannerAdapter.setData(appState.bannerData)
+                bannerAdapter.setData(appState.categories)
                 categoryAdapter.setData(appState.categories)
-                foodViewModel.getDataOfCategory()
+                foodViewModel.getDataOfCategory(categoryAdapter.getCurrentCategory())
             }
             is AppState.SuccessFoodOfCategory -> foodAdapter.setData(appState.food)
+            is AppState.Error -> setToast(appState.error)
         }
+    }
+
+    private fun setToast(error: Throwable) {
+        Toast.makeText(context, error.message, Toast.LENGTH_SHORT).show()
+
     }
 
     private fun initBannerRecyclerView() {
